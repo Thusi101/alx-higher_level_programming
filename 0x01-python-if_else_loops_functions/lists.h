@@ -1,48 +1,26 @@
 #ifndef LISTS_H
 #define LISTS_H
 
-#include <stdlib.h>
+#include <stddef.h>
 
 /**
- * struct Node - singly linked list node
- * @data: integer data
- * @next: pointer to the next node
+ * struct listint_s - singly linked list
+ * @n: integer
+ * @next: points to the next node
  *
- * Description: Defines a node in a singly linked list.
+ * Description: singly linked list node structure
+ *
  */
-typedef struct Node
+typedef struct listint_s
 {
-    int data;
-    struct Node *next;
-} Node;
+    int n;
+    struct listint_s *next;
+} listint_t;
 
-/**
- * print_linked_list - Prints the elements of a linked list.
- * @head: Pointer to the head of the linked list.
- * Return: The number of nodes in the list.
- */
-size_t print_linked_list(const Node *head);
+size_t print_listint(const listint_t *h);
+listint_t *add_nodeint_end(listint_t **head, const int n);
+void free_listint(listint_t *head);
 
-/**
- * add_node_end - Adds a new node at the end of a linked list.
- * @head: Pointer to the head of the linked list.
- * @data: Integer data for the new node.
- * Return: Pointer to the new node.
- */
-Node *add_node_end(Node **head, const int data);
-
-/**
- * free_linked_list - Frees the memory allocated for a linked list.
- * @head: Pointer to the head of the linked list.
- */
-void free_linked_list(Node *head);
-
-/**
- * insert_node - Inserts a node into a sorted linked list.
- * @head: Pointer to the head of the linked list.
- * @number: Integer data for the new node.
- * Return: Pointer to the new node.
- */
-Node *insert_node(Node **head, int number);
+listint_t *insert_node(listint_t **head, int number);
 
 #endif /* LISTS_H */
