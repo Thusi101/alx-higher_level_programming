@@ -4,7 +4,7 @@ from variable_load_5 import a
 
 def print_variable():
     # Print the value of the variable imported from variable_load_5.py
-    print("The value of the imported variable 'a' is:", a)
+    print(f"{a}")
 
 
 if __name__ == "__main__":
