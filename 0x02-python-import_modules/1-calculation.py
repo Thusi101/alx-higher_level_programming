@@ -2,9 +2,9 @@
 if __name__ == "__main__":
     from calculator_1 import add, sub, mul, div
 
-    a, b = 10, 5
-    operations = {'add': add, 'sub': sub, 'mul': mul, 'div': div}
-
-    for op, func in operations.items():
-        result = func(a, b)
-        print(f"{a} {op} {b} = {result}")
+    a = 10
+    b = 5
+    print("{} + {} = {}".format(a, b, add(a, b)))
+    print("{} - {} = {}".format(a, b, sub(a, b)))
+    print("{} * {} = {}".format(a, b, mul(a, b)))
+    print("{} / {} = {}".format(a, b, div(a, b)))
