@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-def new_in_list(my_list, idx, element):
-    if idx < 0:
-        return my_list
-    elif idx >= len(my_list):
-        return my_list
-    new_list = list(my_list)
-    new_list[idx] = element
-    return new_list
+def new_in_list(my_lst, idex, lmt):
+    if idex < 0:
+        return my_lst
+    elif idex >= len(my_lst):
+        return my_lst
+    new_lst = list(my_lst)
+    new_lst[idex] = lmt
+    return new_lst
