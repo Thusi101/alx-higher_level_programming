@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """MyList module.
-Defines a class MyList that is an inherited list class 
+Defines a class MyList that is an inherited list class
 MyList and method that prints the sorted list."""
 
 
